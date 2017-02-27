@@ -15,12 +15,11 @@
                     <div class="divider"></div>
                     <p>{{ $art->isi_artikel }}</p>
 
-                    <button class="btn btn-flat pink accent-3 waves-effect waves-light white-text">Readmore <i
-                                class="material-icons right">send</i></button>
-                    <button class="btn btn-flat purple darken-4 waves-effect waves-light white-text">Edit <i
-                                class="material-icons right">mode_edit</i></button>
-                    <button class="btn btn-flat red darken-4 waves-effect waves-light white-text">Delete <i
-                                class="material-icons right">delete</i></button>
+                    <a href="{{url ('/artikel/show/'.$art->id)}}"><button class="btn btn-flat pink accent-3 waves-effect waves-light white-text">Readmore <i
+                                class="material-icons right">send</i></button></a>
+                    <a href="{{url('/artikel/destroy/'.$art->id)}}"><button class="btn btn-flat purple darken-4 waves-effect waves-light white-text">Delete <i
+                                class="material-icons right">delete</i></button></a>
+                    
                 </div>
             </div>
         @endforeach
@@ -29,7 +28,7 @@
 
 
     <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-        <a class="btn-floating btn-large red">
+        <a href="{{url('/artikel/add')}}" class="btn-floating btn-large red">
             <i class="large material-icons">add</i>
         </a>
     </div>
